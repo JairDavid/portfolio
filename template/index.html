@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="bg-gray-900" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://back-of-uploader-images.herokuapp.com//1658353216088.x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+          font-family: 'Poppins';font-size: 22px;
+        }
+    </style>
+    <title>Home</title>
+</head>
+
+<body>
+
+  {{ template "header"}}
+  {{ template "body"}}
+
+</body>
+<script>
+  AOS.init();
+</script>
+<script>
+    let boton = document.querySelector(".reproductor")
+    boton.addEventListener("click", () => {
+      let etiquetaAudio = document.createElement("audio")
+      etiquetaAudio.setAttribute("src", "https://assets.mixkit.co/sfx/preview/mixkit-long-pop-2358.mp3")
+      etiquetaAudio.play()
+    })
+</script>
+</html>
