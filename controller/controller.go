@@ -7,7 +7,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/index.html", "template/header.html", "template/body.html")
+	tpl, err := template.ParseFiles("template/index.html", "template/header.html", "template/body.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
@@ -15,7 +15,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func Technologies(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/technologies/technologies.html", "template/header.html", "template/technologies/techSkills.html")
+	tpl, err := template.ParseFiles("template/technologies/technologies.html", "template/header.html", "template/technologies/techSkills.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
@@ -23,15 +23,7 @@ func Technologies(w http.ResponseWriter, r *http.Request) {
 }
 
 func Probien(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/probien/probien.html", "template/header.html")
-	if err != nil {
-		log.Print(err)
-	}
-	tpl.Execute(w, nil)
-}
-
-func Adpro(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/adpro/adpro.html", "template/header.html")
+	tpl, err := template.ParseFiles("template/projects/probien/probien.html", "template/projects/probien/probienBody.html", "template/header.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
@@ -39,7 +31,7 @@ func Adpro(w http.ResponseWriter, r *http.Request) {
 }
 
 func Gespro(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/gespro/gespro.html", "template/header.html")
+	tpl, err := template.ParseFiles("template/projects/gespro/gespro.html", "template/header.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
@@ -47,7 +39,7 @@ func Gespro(w http.ResponseWriter, r *http.Request) {
 }
 
 func Covec(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/covec/covec.html", "template/header.html")
+	tpl, err := template.ParseFiles("template/projects/covec/covec.html", "template/header.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
@@ -55,7 +47,7 @@ func Covec(w http.ResponseWriter, r *http.Request) {
 }
 
 func Pibe(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/pibe/pibe.html", "template/header.html")
+	tpl, err := template.ParseFiles("template/projects/pibe/pibe.html", "template/header.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}

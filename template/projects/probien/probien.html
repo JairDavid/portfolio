@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/qg1dYJmg/favicon-32x32.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Probien | Project</title>
+    <style>
+      body {
+          font-family: 'Poppins';font-size: 22px;
+        }
+    </style>
 </head>
 <body>
 
   {{ template "header"}}
+  {{ template "probienBody"}}
+  {{ template "footer"}}
 
 </body>
+<script>
+  AOS.init();
+</script>
 </html>
