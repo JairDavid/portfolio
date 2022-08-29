@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/JairDavid/controller"
@@ -11,7 +10,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	//port := os.Getenv("PORT")
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", controller.Index).Methods("GET")
@@ -21,7 +20,7 @@ func main() {
 	r.HandleFunc("/covec", controller.Covec).Methods("GET")
 	r.HandleFunc("/pibe", controller.Pibe).Methods("GET")
 
-	server := &http.Server{Addr: ":" + port, Handler: r, IdleTimeout: time.Second * 5}
+	server := &http.Server{Addr: ":9000", Handler: r, IdleTimeout: time.Second * 5}
 
 	log.Fatal(server.ListenAndServe())
 }

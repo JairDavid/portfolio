@@ -39,7 +39,7 @@ func Gespro(w http.ResponseWriter, r *http.Request) {
 }
 
 func Covec(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/covec/covec.html", "template/header.html", "template/footer.html")
+	tpl, err := template.ParseFiles("template/projects/covec/covec.html", "template/header.html", "template/projects/covec/covecBody.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
