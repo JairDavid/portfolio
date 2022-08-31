@@ -31,7 +31,7 @@ func Probien(w http.ResponseWriter, r *http.Request) {
 }
 
 func Gespro(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/gespro/gespro.html", "template/header.html", "template/footer.html")
+	tpl, err := template.ParseFiles("template/projects/gespro/gespro.html", "template/projects/gespro/gesproBody.html", "template/header.html", "template/footer.html")
 	if err != nil {
 		log.Print(err)
 	}
