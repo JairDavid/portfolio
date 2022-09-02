@@ -45,11 +45,3 @@ func Covec(w http.ResponseWriter, r *http.Request) {
 	}
 	tpl.Execute(w, nil)
 }
-
-func Pibe(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("template/projects/pibe/pibe.html", "template/header.html", "template/footer.html")
-	if err != nil {
-		log.Print(err)
-	}
-	tpl.Execute(w, nil)
-}
